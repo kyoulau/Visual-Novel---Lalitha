@@ -9,7 +9,7 @@ image LALITHA_NORMAL = "Lalitha/LalithaNormal.png"
 image LALITHA_SORRINDO = "Lalitha/LalithaSorrisoSemDente.png" 
 image LALITHA_PERDIDA = "Lalitha/LalithaPerdida.png"
 image LALITHA_SEM_GRACA = "Lalitha/LalithaSemGraca.png"
-image LALITHA_CHORANDO = "Lalitha/TristeChorando.png"
+image LALITHA_CHORANDO = "Lalitha/LalithaTristeChorando.png"
 
 image LEOPOLD_NORMAL = "Masculinos/LeopoldNormal.png"
 image LEOPOLD_OLHO_FECHADO = "Masculinos/LeopoldOlhoFechado.png"
@@ -24,25 +24,13 @@ image VISTA_DE_CASA = "esquinhaCasaDia.jpg"
 image SALA_CASA = "salaCasa.jpg"
 image COZINHA = "cozinhaCasa.jpg"
 image QUARTO_NOITE = "QuartoLalithaNoite.jpg"
+image QUARTO_DIA = "QuartoLalithaDia.jpg"
 image LOJINHA_DIA = "LojinhaDia.jpg"
+image ESCOLA_DIA_PORTAO = "escolaDia.jpg"
+image SALA_DE_AULA_ESCURA = "salaDeAulaNoite.jpg"
+image SACADA_ESCOLA = "VistaCidadeDia.jpg"
 
 init python:
     style.custom_text.color = "#ff8080"
     style.custom_text.bold = True
-    # style.custom_text.color = "#000000"
     style.custom_text.size = 40
-# para agora
-
-# arrumar estilo de texto
-
-# arrumar numero de pontuações com Leopold
-
-# criptografia simetrica e assimetrica, a maior diferença entra elas é que na assimétrica 
-
-# possui 2 chaves diferentes,pública e privada
-# 1 pra cifrar, outra para decifrar
-# incripta com a publica, descripta com a privada, sempre usará a chave reversa para o 
-# processo oposto
-
-# não da pra saber a identidade do remetente
-# confidencialidade e autenticação

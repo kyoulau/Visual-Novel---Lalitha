@@ -25,7 +25,7 @@ label start_visual_novel:
         "Ir explorar o bairro":
             jump explorar_cidade
 
-        "Ir para cara":
+        "Ir para casa":
             jump ficar_em_casa
 
 label ficar_em_casa:
