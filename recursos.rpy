@@ -1,6 +1,8 @@
 define lalitha = Character("Lalitha", image = "lali")
 define leopold = Character("Leopold")
 define narrador = Character("Narrador")
+define laurence = Character("Laurence")
+
 
 image side lali normal = im.Scale("Lalitha/LalithaNormal.png",150, 325, xoffset=0, yoffset=100)
 # personagens
@@ -15,6 +17,11 @@ image LEOPOLD_NORMAL = "Masculinos/LeopoldNormal.png"
 image LEOPOLD_OLHO_FECHADO = "Masculinos/LeopoldOlhoFechado.png"
 image LEOPOLD_OLHO_GRANDE = "Masculinos/LeopoldComOlhoGrande.png"
 image LEOPOLD_SEXY = "Masculinos/LeopoldSexy.png"
+
+image LAURENCE_NORMAL = "Masculinos/LaurenceNormal.png"
+image LAURENCE_OLHO_FECHADO = "Masculinos/LaurenceOlhoFechado.png"
+image LAURENCE_OLHO_GRANDE = "Masculinos/LaurenceComOlhoGrande.png"
+image LAURENCE_SEXY = "Masculinos/LaurenceSexy.png"
 
 # backgrounds
 image ESQUINA_DE_CASA = "vizinhancaDia.jpg"
