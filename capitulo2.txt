@@ -1,12 +1,8 @@
-Lalitha conhece Laurence - ok 
-lalitha vai pra escola  - ok 
-na sala de aula, ela não fala com ninguém - ok 
-	se conhecer leopold - ok 
-			pensa nele - ok
-			as horas vão passando e vc vai para p intervalo pensando no seu amor Leopold..
-			na fulga, acaba indo para  o teraço onde fica sozinha
-			um garoto cabeludo meio estranho aparece
-			laurence "oh eu pensei que eu era o único que conhecia esse lugar"
+
+			as horas vão passando e vc vai para p intervalo pensando no seu amor Leopold.. - ok
+			na fulga, acaba indo para  o teraço onde fica sozinha - ok
+			um garoto cabeludo meio estranho aparece - ok 
+			laurence "oh eu pensei que eu era o único que conhecia esse lugar" - ok 
 			 ignorar -> 0 pontos laurence
 				lalitha 100% fiel
 				laurece pergunta o que vc fazia sozinha
@@ -31,35 +27,3 @@ na sala de aula, ela não fala com ninguém - ok
 			que isso, pode ficar a vontade...
 				+5 pontos laurece
 					o desenvolvimento a partir daqui pode ser resumido com mais 2 acontecimentos que levarão ao final
-				
-
-
-	se não:
-			vai procurar um mais silencioso para se acalmar - ok
-			vai até o terraço da escola, onde conhece laurence. 
-				(ganhar pontos se puxar assunto 1º) -ok
-			O garoto se apresenta para lalitha -ok
-			ele pergunta se ela quer ouvir musica com ele.- ok
-			lalitha diz que adora musica - ok
-			laurence pergunta que tipo de musica ela gosta. - ok
-				se lalitha gostar de rock: - ok
-					+30 - ok
-				se lalitha gostar de clássica: - ok
-					+15+ - ok
-				se lalitha gostar de pop: - ok
-					+5 de amizade - ok
-			laurence tem uma reação diferente para cada música, mas no final ele e lalitha escutam legião urbana juntos ok
-			laurence pergutna oq ela achou da musica:- ok
-				lalitha gostou: - ok
-					+10 - ok 
-				laurence fica feliz que voce gostou da musica fav dele - ok
-				lalitha prefiria ouvir outra coisa: - ok 
-					+5- ok
-				laurence pede desculpas por não conseguir te agradar
-				lalitha adorou e vai ouvir mais: - ok
-					+15 - ok
-				laurence se apaixonou por você - ok
-
-			voce se dispede de Laurence - ok
-			se for pontos baixos, ele sai primeiro. -ok
-		com o passar dos dias voce e laurence sempre ouviam música na hora do intervalo e vc começou a gostar de rock

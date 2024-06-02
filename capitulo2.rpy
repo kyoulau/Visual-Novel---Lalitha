@@ -12,7 +12,11 @@ label capitulo2:
     show LALITHA_CHORANDO
     with dissolve
     narrador "O relógio marcava 7:00am e você acaba de acordar para ir à escola"
-    # aqui da pra por o som de um despertador
+
+    play sound "audio/alarme.mp3" volume 0.5
+    $ renpy.pause(2.0)
+    stop sound
+
     lalitha "Aff odeio acordar cedo.."
     show LALITHA_PERDIDA
     with dissolve
@@ -27,23 +31,150 @@ label capitulo2:
 
 label conhecendo_escola:
     scene ESCOLA_DIA_PORTAO with fade_in
-    #  som de pessoas conversando
+    play sound "audio/pessoasFalando.mp3" volume 0.25
+    $ renpy.pause(2.0)
     show LALITHA_PERDIDA with dissolve
     lalitha "uau quanta gente..."
-
+    stop sound
     scene SALA_DE_AULA_ESCURA
     with fade_in
-    # som sala de aula
+    play sound "audio/pessoasFalando.mp3" volume 0.25
     narrador "Diferente da sua antiga escola, as pessoas da nova cidade costumavam falar alto."
     narrador "Você não soube muito bem como se enturmar, então ficou na sua."
     if amizade_leopold > 0:
         lalitha normal "Gostaria de ver meu amigo Leopold agora..."
         with dissolve
-        
+        jump fuga_de_lalitha
     else:
         lalitha normal "Assim que o intervalo chegar, vou procurar um lugar calmo para me acalmar."
         with dissolve
         jump laurence_no_terraco
+    stop sound
+
+label fuga_de_lalitha:
+    if amizade_leopold > 30:
+        scene SALA_DE_AULA_ESCURA with fade_in
+        show LALITHA_CHORANDO with dissolve
+        narrador "As horas vão passando e você vai para o intervalo pensando no seu amor Leopold.."
+        play sound "audio/alarmeEscola.mp3" volume 0.5
+        $ renpy.pause(2.0)
+        stop sound
+        narrador "Na fulga, acaba indo para  o teraço onde fica sozinha"
+        jump lalitha_terraco_conheceu_leopold
+    else:
+        scene SALA_DE_AULA_ESCURA with fade_in
+        show LALITHA_PERDIDA with dissolve
+        lalitha "Será que o Leopold estuda por aqui? Impossível."
+        play sound "audio/alarmeEscola.mp3" volume 0.5
+        $ renpy.pause(2.0)
+        stop sound
+        narrador "Na fulga, acaba indo para  o teraço onde fica sozinha"
+        jump lalitha_terraco_conheceu_leopold
+
+label lalitha_terraco_conheceu_leopold:
+    scene SACADA_ESCOLA with fade_in
+    lalitha "Aqui parece um bom lugar para ficar, calmo e tranquilo!"
+    show LAURENCE_OLHO_GRANDE:
+        zoom 0.4
+    with dissolve
+    narrador "Um garoto cabeludo meio estranho aparece."
+    laurence "Oh! eu pensei que eu era o único que conhecia esse lugar"
+    menu:
+        "Ignorar.":
+            centered "{=custom_text}Você ganhou +0 pontos com Laurece!"
+            jump leopold_puxa_assunto_com_lali
+        "Que isso, pode ficar a vontade.":
+            centered "{=custom_text}Você ganhou +5 pontos com Laurece!"
+            jump dialogo_lalitha_laurence
+
+label leopold_puxa_assunto_com_lali:
+    scene SACADA_ESCOLA with fade_in
+    narrador "Você apenas olhou o garoto de canto sem falar nada."
+    lalitha normal "..."
+    show LAURENCE_NORMAL:
+        zoom 0.4
+    with dissolve
+    laurence "O que você ta fazendo aqui sozinha ?"
+    menu:
+        "Vim relaxar.":
+            centered "{=custom_text}Você ganhou +10 pontos com Laurece!"
+            $ amizade_laurence += 10
+            jump dialogo_lalitha_laurence
+
+        "Vim refletir sobre alguém.":
+            centered "{=custom_text}Você ganhou +5 pontos com Laurece!"
+            $ amizade_laurence += 5
+            jump dialogo_lalitha_apaixonada_laurence
+
+label dialogo_lalitha_laurence:
+    scene SACADA_ESCOLA with fade_in
+    show LAURENCE_OLHO_FECHADO:
+        zoom 0.4
+    with dissolve
+    laurence "Poxa você parece bem chateda logo no primeiro dia de aula."
+    laurence "Eu me chamo Laurence, e você?"
+    lalitha normal "Lalitha!"
+    show LAURENCE_NORMAL:
+        zoom 0.4
+    with dissolve
+    laurence "Ano passado, no segundo ano eu e meus parças costumavamos vir aqui para jogar bola."
+    laurence "Mas eles mudaram de escola esse ano, então eu sigo como Lobo Solitário, venho aqui para escutar música sozinho."
+    lalitha normal "Aqui é bacana mesmo..."
+    hide LAURENCE_NORMAL with dissolve
+    show LAURENCE_OLHO_FECHADO:
+        zoom 0.4
+    with dissolve
+    lalitha normal "O que você escuta ?"
+    laurence "Gosto bastante de Rock and Roll, e você ?"
+    show LAURENCE_NORMAL:
+        zoom 0.4
+    with dissolve
+    lalitha normal "Legal, nunca escutei muitos.."
+    laurence "Posso compartilhar minha música com você se quiser, depois você diz o que achou!"
+    menu:
+        "Pode ser... (meio suspeito)":
+            centered "{=custom_text}Você ganhou +5 pontos com Laurece!"
+            $ amizade_laurence += 5
+            jump escutando_musica_juntos
+        "Só uma música se não a aula ja volta e eu perco o horário!":
+            centered "{=custom_text}Você ganhou +10 pontos com Laurece!"
+            laurence "HAHA relaxa, você vai curtir!"
+            $ amizade_laurence += 10
+            jump escutando_musica_juntos
+
+label dialogo_lalitha_apaixonada_laurence:
+    scene SACADA_ESCOLA with fade_in
+    show LAURENCE_NORMAL:
+            zoom 0.4
+    with dissolve
+    laurence "Refletir sobre alguém?? Você ta gostando de alguém??"
+    narrador "O garoto foi um pouco invasivo, e você não estava afim de ficar se expondo daquela maneira."
+    lalitha normal "Ah deixa pra lá.."
+    lalitha normal "Meu nome é Lalitha"
+    show LAURENCE_OLHO_FECHADO:
+        zoom 0.4
+    with dissolve
+    laurence "O meu é Laurence"
+    hide LAURENCE_OLHO_FECHADO with dissolve
+    laurence "Ano passado, no segundo ano eu e meus parças costumavamos vir aqui para jogar bola."
+    laurence "Mas eles mudaram de escola esse ano, então eu sigo como Lobo Solitário, venho aqui para escutar música sozinho."
+    lalitha normal "Aqui é bacana mesmo..."
+    show LAURENCE_SEXY:
+        zoom 0.4
+    laurence "Se quiser podemos escutar um som dahora agora."
+    laurence "Você é do rock??"
+    menu: 
+        "Nâo :()":
+            centered "{=custom_text}Você não ganhou pontos com Laurece!"
+            $ amizade_laurence += 0
+        "Sim!":
+            centered "{=custom_text}Você ganhou +5 pontos com Laurece!"
+            $ amizade_laurence += 5
+    show LAURENCE_NORMAL:
+        zoom 0.4
+    with dissolve
+    laurence "Vou te mostrar um som bem dahora então."
+    jump escutando_musica_juntos
 
 label laurence_no_terraco:
     scene SACADA_ESCOLA with fade_in
@@ -214,6 +345,7 @@ label laurence_triste:
     with dissolve
     laurence "E um pouco chocado também, talvez o rock brasileiro não seja para você."
     lalitha normal "..."
+    jump despedida_laurence_apaixonado
 
 label laurence_apaixonado:
     scene SACADA_ESCOLA
@@ -240,17 +372,17 @@ label despedida_laurence_apaixonado:
         lalitha normal "Bom,minha aula já vai começar! Até.."
         laurence "Nós vamos nos encontrar de novo :)"
         scene SALA_DE_AULA_ESCURA with fade_in
-        narrador "com o passar dos dias voce e laurence sempre ouviam música na hora do intervalo e vocês ficaram bastante próximos !"
+        narrador "com o passar dos dias você e laurence sempre ouviam música na hora do intervalo e vocês ficaram bastante próximos !"
     elif amizade_laurence in range(40):
         lalitha normal "Bom, minha aula já vai começar! Até.."
         laurence "Até Lalitha !"
         scene SALA_DE_AULA_ESCURA with fade_in
-        narrador "com o passar dos dias voce e laurence se tornaram bons colegas, ele era um rockeiro dahora!"
+        narrador "com o passar dos dias você e laurence se tornaram bons colegas, ele era um rockeiro dahora!"
     elif amizade_laurence in range(20):
         lalitha normal "Certo, minha aula já vai começar! Até.."
         laurence "Tchau.."
         scene SALA_DE_AULA_ESCURA with fade_in
-        narrador "com o passar dos dias voce e laurence não trocaram tantas palavras, tornaram-se apenas colegas distantes !"
+        narrador "com o passar dos dias você e laurence não trocaram tantas palavras, tornaram-se apenas colegas distantes !"
     elif amizade_laurence in range(10):
         laurence"Certo, minha aula já vai começar! Até.."
         lalitha normal "Tchau.."

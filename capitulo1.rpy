@@ -151,13 +151,12 @@ label continuar_conversa_leopold:
     
     show LEOPOLD_NORMAL
     with fade    
-    leopold "Eu moro aqui perto, vivo na cidade desde que nasci"
-    narrador "Leopold também se interessa em fazer amizade com voce"
+    leopold "Eu moro aqui perto, vivo na cidade desde que nasci :)"
+    narrador "Leopold também se interessa em fazer amizade com você."
     show LEOPOLD_OLHO_FECHADO:
         zoom 0.4
     with dissolve
     leopold "E você? O que te fez vir para cá?"
-    with fade_in
 
     hide LEOPOLD_OLHO_FECHADO with dissolve
     menu:
