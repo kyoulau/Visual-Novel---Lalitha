@@ -342,7 +342,39 @@ label lazarus_oferece_ajuda:
     lalitha normal "Quem sabe um dia!"
     jump despedida_lazarus
     
+
 label fim_jogo:
+    scene ESQUINA_DE_CASA with fade_in
+    centered "{=custom_text}Parabéns por chegar ao fim do Jogo!"
+    centered "{=custom_text}Veja agora o nível de afeto com cada garoto :)"
+    centered "{=custom_text}Nível de afeto com Laurence: [amizade_laurence]!"
+    centered "{=custom_text}Nível de afeto com Leopold: [amizade_leopold]!"
+    centered "{=custom_text}Nível de afeto com Lazarus: [amizade_lazarus]!"
+
+    if amizade_leopold > amizade_laurence and amizade_leopold > amizade_lazarus:
+        centered "{=custom_text}Você ficou com Leopold"
+        show LEOPOLD_NORMAL:
+            zoom 0.4
+        with dissolve
+        leopold "Obrigada por me escolher <3"
+    elif amizade_laurence > amizade_leopold and amizade_laurence > amizade_lazarus:
+        centered "{=custom_text}Você ficou com Laurence"
+        show LAURENCE_NORMAL:
+            zoom 0.4
+        with dissolve
+        laurence "Viva o Rock and Roll!"
+    elif amizade_lazarus > amizade_leopold and amizade_lazarus > amizade_laurence:
+        centered "{=custom_text}Você ficou com Lazarus"
+        show LAZARUS_NORMAL:
+            zoom 0.4
+        with dissolve
+        lazarus "Obrigada por me escolher <3"
+    else:
+        centered "{=custom_text}Houve um empate nos níveis de afeto!"
+
+    centered "{=custom_text}Laura também agradece!"
+
+    return
     scene ESQUINA_DE_CASA with fade_in
     centered "{=custom_text}Parabéns por chegar ao fim do Jogo!"
     centered "{=custom_text}Veja agora o nível de afeto com cada garoto :)"
