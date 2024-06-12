@@ -1,2 +1,0 @@
-fazer fim_jogo com condicionar para ver qual a maior pontuação dos 3 garotos
-fazer jump ir_no_banheiro
