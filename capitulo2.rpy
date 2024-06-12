@@ -41,7 +41,9 @@ label conhecendo_escola:
     play sound "audio/pessoasFalando.mp3" volume 0.25
     narrador "Diferente da sua antiga escola, as pessoas da nova cidade costumavam falar alto."
     narrador "Você não soube muito bem como se enturmar, então ficou na sua."
-    if amizade_leopold > 0:
+    $ renpy.pause(2.0)
+    stop sound
+    if amizade_leopold > 10:
         lalitha normal "Gostaria de ver meu amigo Leopold agora..."
         with dissolve
         jump fuga_de_lalitha
@@ -49,7 +51,6 @@ label conhecendo_escola:
         lalitha normal "Assim que o intervalo chegar, vou procurar um lugar calmo para me acalmar."
         with dissolve
         jump laurence_no_terraco
-    stop sound
 
 label fuga_de_lalitha:
     if amizade_leopold > 30:
@@ -164,7 +165,7 @@ label dialogo_lalitha_apaixonada_laurence:
     laurence "Se quiser podemos escutar um som dahora agora."
     laurence "Você é do rock??"
     menu: 
-        "Nâo :()":
+        "Nâo :(":
             centered "{=custom_text}Você não ganhou pontos com Laurece!"
             $ amizade_laurence += 0
         "Sim!":
@@ -181,7 +182,7 @@ label laurence_no_terraco:
     show LALITHA_NORMAL with dissolve
     lalitha "Aqui parece um bom lugar para ficar, adoro pegar um solzinho!"
     show LALITHA_SORRINDO with dissolve
-    narrador "Você aproveitou seus momentos de paz sozinha até ver que não estava sozinha."
+    narrador "Você aproveitou seus momentos de paz por um momento até ver que não estava sozinha."
     hide LALITHA_SORRINDO with dissolve
     show LAURENCE_NORMAL:
         zoom 0.4
@@ -194,8 +195,8 @@ label laurence_no_terraco:
             $ amizade_laurence += 10
             jump conhecer_laurence
         "Ficar na minha":
-            centered "{=custom_text}Você não ganhou nenhum ponto com Laurece :( )"
-            jump laurence_fala_com_lalitha
+            centered "{=custom_text}Você não ganhou nenhum ponto com Laurece :( "
+            jump leopold_puxa_assunto_com_lali
 
 label conhecer_laurence:
     scene SACADA_ESCOLA with fade_in
@@ -287,7 +288,7 @@ label lalitha_pop:
     show LAURENCE_NORMAL:
         zoom 0.4
     with dissolve
-    laurence "Eu não sou gão fã, HAHAHA... Gosto mais do Rock and Roll!!"
+    laurence "Eu não sou tão fã, HAHAHA... Gosto mais do Rock and Roll!!"
     laurence "Agora estou com medo de você não gostar da minha música"
     jump escutando_musica_juntos
 
@@ -373,20 +374,23 @@ label despedida_laurence_apaixonado:
         laurence "Nós vamos nos encontrar de novo :)"
         scene SALA_DE_AULA_ESCURA with fade_in
         narrador "com o passar dos dias você e laurence sempre ouviam música na hora do intervalo e vocês ficaram bastante próximos !"
+        jump capitulo3
     elif amizade_laurence in range(40):
         lalitha normal "Bom, minha aula já vai começar! Até.."
         laurence "Até Lalitha !"
         scene SALA_DE_AULA_ESCURA with fade_in
         narrador "com o passar dos dias você e laurence se tornaram bons colegas, ele era um rockeiro dahora!"
+        jump capitulo3
     elif amizade_laurence in range(20):
         lalitha normal "Certo, minha aula já vai começar! Até.."
         laurence "Tchau.."
         scene SALA_DE_AULA_ESCURA with fade_in
         narrador "com o passar dos dias você e laurence não trocaram tantas palavras, tornaram-se apenas colegas distantes !"
+        jump capitulo3
     elif amizade_laurence in range(10):
         laurence"Certo, minha aula já vai começar! Até.."
         lalitha normal "Tchau.."
         scene SALA_DE_AULA_ESCURA with fade_in
         narrador "Laurence te achou demasiada rude! Sempre que seus olhares se cruzam ele tenta fingir que não te viu, uma pena."
+        jump capitulo3
     centered "{=custom_text}Nível de afeto com Laurence: [amizade_laurence]!"
-        

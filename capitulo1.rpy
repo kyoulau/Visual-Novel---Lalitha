@@ -86,7 +86,7 @@ label explorar_cidade:
         "Voltar para casa":
             jump ficar_em_casa
 
-label conhecer_leopold :
+label conhecer_leopold:
     leopold "Olá! Nunca vi você aqui pelo parque" 
     
     lalitha normal "Eu sou nova aqui, meu nome é Lalitha"
@@ -119,7 +119,7 @@ label leopold_tenta_conversar:
     with dissolve
     leopold "De onde você é ?"
 
-    lalitha normal "Eu vim do interior, eu e minha familia vivíamos numa Fazendinha, mas eu resolvi vir ate a cidade."
+    lalitha normal "Eu vim do interior, eu e minha familia vivíamos numa Fazendinha, mas eu resolvi vir ate a cidade para morar."
 
     scene PARQUE_DIA
 

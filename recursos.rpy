@@ -2,6 +2,8 @@ define lalitha = Character("Lalitha", image = "lali")
 define leopold = Character("Leopold")
 define narrador = Character("Narrador")
 define laurence = Character("Laurence")
+define lazarus = Character("Lazarus")
+define semNome = Character("...")
 
 
 image side lali normal = im.Scale("Lalitha/LalithaNormal.png",150, 325, xoffset=0, yoffset=100)
@@ -23,6 +25,11 @@ image LAURENCE_OLHO_FECHADO = "Masculinos/LaurenceOlhoFechado.png"
 image LAURENCE_OLHO_GRANDE = "Masculinos/LaurenceComOlhoGrande.png"
 image LAURENCE_SEXY = "Masculinos/LaurenceSexy.png"
 
+image LAZARUS_NORMAL = "Masculinos/LazarusNormal.png"
+image LAZARUS_OLHO_FECHADO = "Masculinos/LazarusOlhoFechado.png"
+image LAZARUS_OLHO_GRANDE = "Masculinos/LazarusComOlhoGrande.png"
+image LAZARUS_SEXY = "Masculinos/LazarusSexy.png"
+
 # backgrounds
 image ESQUINA_DE_CASA = "vizinhancaDia.jpg"
 image RUA_DE_CASA = "RuaParaCasaDia.jpg"
@@ -36,6 +43,11 @@ image LOJINHA_DIA = "LojinhaDia.jpg"
 image ESCOLA_DIA_PORTAO = "escolaDia.jpg"
 image SALA_DE_AULA_ESCURA = "salaDeAulaNoite.jpg"
 image SACADA_ESCOLA = "VistaCidadeDia.jpg"
+image SALA_DE_TARDE = "salaDeAulaTarde.jpg"
+image ESCOLA_TARDE = "escolaNoite"
+image FAST_FOOD = "fastFoodDia"
+image BANHEIRO_PARQUE = "banheiroParqueDia"
+image PISTA_SKATE = "pracaComPalmeiras"
 
 init python:
     style.custom_text.color = "#ff8080"
