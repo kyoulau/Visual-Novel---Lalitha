@@ -4,7 +4,8 @@
 
 <img src="assets/gif/ren.py-demo-ezgif.com-speed.gif" alt="Descrição da Imagem" width="500"/>
 
-  Link para dowloand [aqui](coração-urbano-1.0-pc.zip).
+  ### Link para download [aqui](coração-urbano-1.0-pc.zip).
+  Descompacte a pasta e execute o arquivo executável (.exe)
 
 ## Autores
 
